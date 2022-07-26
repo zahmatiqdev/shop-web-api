@@ -26,7 +26,7 @@ class AddressSerializer(serializers.ModelSerializer):
     class Meta:
         model = Address
         fields = ('address',)
-        read_only_field = ('user_id',)
+        read_only_field = ('user', 'id',)
 
 
 class OrderItemSerializer(serializers.ModelSerializer):
