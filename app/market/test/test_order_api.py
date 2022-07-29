@@ -22,16 +22,16 @@ def detail_url(order_id):
     return reverse('market:order-detail', args=[order_id])
 
 
-def sample_address(user, address='Address sample'):
+def sample_address(user, name='Address sample'):
     """Create and return a sample address"""
-    return Address.objects.create(user=user, address=address)
+    return Address.objects.create(user=user, name=name)
 
 
 def sample_order(user, address, **params):
     """Create and return a sample order"""
     defaults = {
         'note': 'Sample Note',
-        'date': datetime.now(),
+        'delivery': datetime.now(),
     }
     defaults.update(params)
 
@@ -71,14 +71,14 @@ class PrivateOrderApiTests(TestCase):
 
     def test_retrieve_order(self):
         """Test retrieving a list of recipes"""
-        address_1 = sample_address(self.user, address='Tehran, Iran')
-        address_2 = sample_address(self.user, address='Maschhad, Iran')
+        address_1 = sample_address(self.user, name='Tehran, Iran')
+        address_2 = sample_address(self.user, name='Maschhad, Iran')
         sample_order(user=self.user, address=address_1)
         sample_order(user=self.user, address=address_2)
 
         res = self.client.get(ORDER_LIST_URL)
 
-        orders = Order.objects.all().order_by('-date')
+        orders = Order.objects.all().order_by('-delivery')
         serializer = OrderSerializerList(orders, many=True)
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(res.data, serializer.data)

@@ -41,16 +41,16 @@ class PrivateAddressApiTests(TestCase):
         """Test retrieving addresses"""
         Address.objects.create(
             user=self.user,
-            address='40. Adibstreet, Mashhad, Iran'
+            name='40. Adibstreet, Mashhad, Iran'
         )
         Address.objects.create(
             user=self.user,
-            address='20. Shariati, Teheran, Iran'
+            name='20. Shariati, Teheran, Iran'
         )
 
         res = self.client.get(ADDRESS_URL)
 
-        addresses = Address.objects.all().order_by('-address')
+        addresses = Address.objects.all().order_by('-name')
         serializer = AddressSerializer(addresses, many=True)
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(res.data, serializer.data)

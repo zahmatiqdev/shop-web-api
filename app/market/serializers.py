@@ -25,7 +25,7 @@ class AddressSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Address
-        fields = ('address',)
+        fields = ('name',)
         read_only_field = ('user', 'id',)
 
 
@@ -34,7 +34,7 @@ class OrderItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = OrderItem
-        fields = ['order', 'product', 'unit', 'amount']
+        fields = ['order', 'product', 'unit', 'quantity']
 
 
 class OrderItemCustomSerializer(serializers.ModelSerializer):
@@ -45,7 +45,7 @@ class OrderItemCustomSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = OrderItem
-        fields = ['product', 'unit', 'amount']
+        fields = ['product', 'unit', 'quantity']
 
 
 class OrderSerializerCreate(serializers.ModelSerializer):
@@ -53,7 +53,7 @@ class OrderSerializerCreate(serializers.ModelSerializer):
 
     class Meta:
         model = Order
-        fields = ['id', 'date', 'note', 'address']
+        fields = ['delivery', 'note', 'address']
         read_only_field = ('user',)
 
 
@@ -64,16 +64,16 @@ class OrderSerializerList(serializers.ModelSerializer):
 
     class Meta:
         model = Order
-        fields = ['id', 'user', 'date', 'note', 'address']
+        fields = ['id', 'user', 'delivery', 'note', 'address']
 
 
 class OrderSerializerDetail(serializers.ModelSerializer):
     """Serializer for Order object & display item details,
     user information and address"""
-    user = UserSerializer(read_only=True)
-    address = AddressSerializer(read_only=True)
-    items = OrderItemCustomSerializer(many=True, read_only=True)
+    # user = UserSerializer(read_only=True)
+    # address = AddressSerializer(read_only=True)
+    products = OrderItemCustomSerializer(many=True, read_only=True)
 
     class Meta:
         model = Order
-        fields = ['id', 'user', 'date', 'note', 'address', 'items']
+        fields = ['id', 'user', 'delivery', 'note', 'address', 'products']
