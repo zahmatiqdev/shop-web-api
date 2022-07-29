@@ -77,9 +77,9 @@ class Order(models.Model):
 class OrderItem(models.Model):
     """OrderItem model to define the items of each order"""
     order = models.ForeignKey(Order, related_name='products', on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, related_name='productsItem', on_delete=models.PROTECT)
-    unit = models.ForeignKey(Unit, related_name='unitsItem', on_delete=models.PROTECT)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    unit = models.ForeignKey(Unit, on_delete=models.CASCADE)
     quantity = models.IntegerField()
 
     def __str__(self):
-        return f"{self.order}-{self.product}"
+        return f"{self.order}-{self.quantity}"

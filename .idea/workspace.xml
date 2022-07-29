@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8f47599c-df19-4a5b-a8bd-1baff8bcd1ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/market/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/market/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/market/test/test_address_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/market/test/test_address_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/market/test/test_order_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/market/test/test_order_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/market/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/market/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/market/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/market/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,50 +34,39 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="flake8" value="1" />
-          <entry key="py" value="62" />
+          <entry key="py" value="69" />
           <entry key="yml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="62" />
+          <entry key="Python" value="69" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3160" />
+          <entry key="Python Console" value="114" />
+          <entry key="py" value="4335" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3160" />
+          <entry key="Python" value="4449" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/market/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="80" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="269">
+              <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
               <folding>
-                <element signature="e#1#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/market/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="72" column="45" lean-forward="true" selection-end-line="74" />
-              <folding>
-                <element signature="e#0#72#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,8 +75,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/market/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="14" column="53" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="53" />
+            <state relative-caret-position="234">
+              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/market/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
+              <folding>
+                <element signature="e#0#72#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,12 +116,16 @@
       <find>products</find>
       <find>OrderSerializerList</find>
       <find>OrderListAPIView</find>
-      <find>OrderSerializerCreate</find>
-      <find>OrderCreateAPIView</find>
       <find>OrderItemCustomSerializer</find>
       <find>FullOrderItemCustomSerializer</find>
-      <find>OrderItemCreateAPIView</find>
+      <find>OrderSerializerCreate</find>
+      <find>FullOrderItemSerializer</find>
+      <find>FullOrderSerializerCreate</find>
       <find>OrderItemSerializer</find>
+      <find>info</find>
+      <find>image_data</find>
+      <find>OrderItemCreateAPIView</find>
+      <find>OrderCreateAPIView</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,16 +139,17 @@
         <option value="$PROJECT_DIR$/app/market/test/test_addresses_api.py" />
         <option value="$PROJECT_DIR$/app/market/test/test_unit_api.py" />
         <option value="$PROJECT_DIR$/app/market/test/test_product_api.py" />
-        <option value="$PROJECT_DIR$/app/market/urls.py" />
         <option value="$PROJECT_DIR$/app/supermarket/serializers.py" />
         <option value="$PROJECT_DIR$/app/supermarket/urls.py" />
         <option value="$PROJECT_DIR$/app/supermarket/models.py" />
         <option value="$PROJECT_DIR$/app/market/test/test_address_api.py" />
         <option value="$PROJECT_DIR$/app/market/test/test_order_api.py" />
-        <option value="$PROJECT_DIR$/app/core/models.py" />
         <option value="$PROJECT_DIR$/app/app/urls.py" />
-        <option value="$PROJECT_DIR$/app/market/serializers.py" />
+        <option value="$PROJECT_DIR$/app/core/admin.py" />
+        <option value="$PROJECT_DIR$/app/core/models.py" />
+        <option value="$PROJECT_DIR$/app/market/urls.py" />
         <option value="$PROJECT_DIR$/app/market/views.py" />
+        <option value="$PROJECT_DIR$/app/market/serializers.py" />
       </list>
     </option>
   </component>
@@ -181,12 +188,6 @@
               <item name="shop-web-api" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="market" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop-web-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop-web-api" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -227,8 +228,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19977863" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19977863" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -241,8 +243,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008301" side_tool="true" weight="0.32756758" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4991699" visible="true" weight="0.4864865" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013835" side_tool="true" weight="0.41837838" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4986165" visible="true" weight="0.3708108" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32972974" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -363,10 +365,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/migrations/0008_auto_20220729_0806.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/migrations/0009_auto_20220729_0823.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/core/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="59" column="46" lean-forward="true" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+        <state relative-caret-position="1372">
+          <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -375,27 +401,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/market/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/market/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-          <folding>
-            <element signature="e#1#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="234">
+          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/market/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="72" column="45" lean-forward="true" selection-end-line="74" />
+        <state relative-caret-position="494">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="e#0#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/market/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -2,7 +2,7 @@ from rest_framework import generics, mixins, authentication, permissions
 
 from core.models import Product, Unit, Address, Order, OrderItem
 from market.serializers import ProductSerializer, UnitSerializer, AddressSerializer, \
-    OrderSerializerCreate, OrderSerializerList, OrderSerializerDetail, OrderItemSerializer
+    OrderSerializerCreate, OrderSerializerList, OrderSerializerDetail, OrderItemSerializer, FullOrderSerializerCreate
 
 
 
@@ -72,3 +72,14 @@ class OrderItemCreateAPIView(generics.CreateAPIView):
 
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
+
+
+class FullOrderCreateAPIView(generics.CreateAPIView):
+    """Define Order View only for Create"""
+    authentication_classes = (authentication.TokenAuthentication,)
+    permission_classes = (permissions.IsAuthenticated,)
+    serializer_class = FullOrderSerializerCreate
+    queryset = Order.objects.all()
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
